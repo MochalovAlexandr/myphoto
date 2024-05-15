@@ -1,0 +1,427 @@
+.contacts{
+    display: grid;
+    grid-area: contacts;
+    background: #fff;
+
+    grid-template: minmax(auto, 82px) minmax(460px, auto)/ 1fr minmax(auto, 850px) minmax(auto, 410px) 1fr;
+    gap: 30px;
+    padding-bottom: 69px;
+    &__title{
+        grid-column: 2/3;
+        align-self: end;
+        margin: 0;
+        padding: 0;
+        padding-top: 90px;
+        font-family: sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30.96px;
+        // letter-spacing: 0.83px;    
+        color: #202020;
+    }
+
+    &__wrapleft{
+        position: relative;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        // outline: 1px solid #444;
+    }
+
+    &__map{
+        
+        max-width: 850px;
+        // width: 660px;
+        height: 100%;
+        
+        background-color: #FF6E30;
+    }
+
+    &__text{
+        position: absolute;
+        // top: 0;
+        // left: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 48.24%;
+        height: 100%;
+        padding: 174px 6px 7px 60px;
+        // outline: 1px solid #444;
+        background-color: #20202099;
+        // background-color: rgba(32, 32, 32 0.85);
+
+    }
+
+    &__closebtn{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        // text-align: right;
+        // padding: 20px 20px 5px 5px;
+        // margin-bottom: 50px;
+    }
+
+    &__closebtn svg circle{
+       transition: fill .2s ease-in-out;
+    }
+
+    &__closebtn svg circle:hover:not(:focus-visible){
+        fill:#ff6e30 ; 
+    }
+
+    &__closebtn svg circle:active:not(:focus-visible){
+        fill:#CE4307 ; 
+    }
+
+    &__closebtn svg circle:focus-visible{
+        fill:#07ce43 ; 
+    }
+
+
+    &__name{        
+        margin-bottom: 7px;
+        font-family: sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22px;
+        // letter-spacing: 0.83px;    
+        color: #fff;
+    }
+
+    &__adress{
+        width: 80%;
+        margin-bottom: 3px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        // letter-spacing: 0.83px;    
+        color: #CACACA;
+    }
+
+    &__tel{
+        padding-left: 22px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.64px;
+        letter-spacing: 0.5px;    
+        color: #FF6E30;
+        background-image: url('./images/tel.png');
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: color .2s ease-in-out;
+    }
+
+    &__tel:hover{
+        color:#CE4307;
+    }
+    
+    &__wrapright{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        // outline: 1px solid #444;
+
+    }
+}
+
+// .contacts__wrapright {
+// }
+.contright {
+
+    &__title {
+        margin: 0;
+        margin-top: -7px;
+        margin-bottom: 5px;
+        padding: 0;
+        font-family: sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.83px;    
+        color: #202020;
+    }
+    &__text {
+        margin-bottom: 15px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.83px;    
+        color: #999999;
+    }
+    &__inpname {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 50px;
+        padding: 7px 6px 7px 24px;
+        background-color: #E9E9E9;
+        border: none;
+        outline: none;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        // letter-spacing: 0.83px;    
+        color: #999999;
+    }
+    &__inpemail {
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        background-color: #E9E9E9;
+        border: none;
+        outline: none;
+        padding: 7px 6px 7px 24px;
+        margin-bottom: 20px;
+        background-color: #E9E9E9;
+        border: none;
+        outline: none;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        // letter-spacing: 0.83px;    
+        color: #999999;
+    }
+    &__inptext {
+        display: block;
+        width: 100%;
+        background-color: #E9E9E9;
+        border: none;
+        outline: none;
+        padding: 17px 6px 7px 24px;
+        margin-bottom: 15px;
+        background-color: #E9E9E9;
+        border: none;
+        outline: none;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.75px;
+        // letter-spacing: 0.83px;    
+        color: #202020;
+    }
+
+    &__btn {
+        display: block;
+        padding: 17px 16px 13px 24px;
+        border-radius: 3px;
+        border: none;
+        background-color: #FF6E30;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18.75px;
+        // letter-spacing: 0.83px;    
+        // color: #999999;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+    }
+
+    &__btn:hover:not(:focus-visible){
+        background: #BC572B;
+    }
+
+    &__btn:active:not(:focus-visible){
+        outline: 2px solid #CE4307;
+        outline-offset: -2px;
+        background: #FF6E30;
+    }
+
+    &__btn:focus-visible{        
+        background: #CE4307;
+        outline: none;
+    }
+
+}
+
+textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #999999;
+    opacity: 1; /* Firefox */
+}
+
+textarea:hover::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FF6E30;
+    opacity: 1; /* Firefox */
+}
+
+textarea:active { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    outline: 1px solid #FF6E30;
+}
+
+textarea:focus-visible { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    outline: 1px solid #F06666;
+}
+
+
+@media (max-width:1220px) {
+    .contacts{     
+        grid-template: minmax(auto, 82px) minmax(460px, auto) /  1fr minmax(auto, 690px) minmax(auto, 440px) 1fr;
+        gap: 30px;
+    }
+
+    .contacts__map{
+        max-width: 690px;
+        width: 660px;
+        min-height: 460px;
+    }
+
+    
+    // .contacts__text {
+    //     position: absolute;
+    //     height: 157px;
+    //     left: 0;
+    //     top: 303px;
+    //     z-index: 10;
+    //     width: 100%;
+    //     padding: 24px 6px 7px 31px;
+    //     background-color: rgba(32,32,32,.6);
+    // }
+
+}
+
+@media (max-width:1024px) {
+    .contacts{     
+        grid-template: minmax(auto, 82px) minmax(460px, auto) / 1fr minmax(auto, 590px) minmax(auto, 370px) 1fr;
+        gap: 30px;
+    }
+
+    .contacts__map{
+        max-width: 590px;
+        // min-height: 460px;
+        // height: 100%;
+    }
+
+    .contacts__text {
+        position: absolute;
+        height: 157px;
+        // left: 0;
+        // top: 303px;
+        // bottom: 1px;
+        z-index: 10;
+        width: 100%;
+        padding: 24px 6px 7px 31px;
+        background-color: rgba(32,32,32,.6);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .contacts{
+        grid-template: minmax(auto, 82px) minmax(460px, auto) minmax(460px, auto)/ 1fr minmax(auto, 714px) 1fr;
+        padding-bottom: 39px;
+    }
+
+    .contacts__map {
+        max-width: 714px;
+        width: 100%;
+    }
+
+    .contacts__wrapright {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+}
+
+@media (max-width:320px) {
+    .contacts{     
+        grid-template: minmax(auto, 71px) minmax(460px, auto) minmax(460px, auto)/1fr  minmax(auto, 320px) 1fr;
+        gap: 0;
+        &__title{
+            padding: 0;
+            padding-left: 21px;
+            padding-bottom: 14px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.22px;
+        }
+    }
+
+    .contacts__text {       
+        padding: 24px 6px 7px 20px;
+    }
+
+    .contacts__name {
+        margin-bottom: 7px;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .contacts__adress {
+        width: 80%;
+        margin-bottom: 15px;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #cacaca;
+    }
+
+    .contacts__tel {
+        padding-left: 22px;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.06px;
+    }
+
+    .contacts__map {        
+        min-height: 472px;
+    }
+
+    .contright__title {
+        // margin: -7px 0 5px;
+        // padding: 0;
+        // font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        // letter-spacing: .83px;
+    }
+
+    .contright{
+        padding: 30px 21px 11px;
+
+        &__text{
+            margin-bottom: 17px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: .23px;
+        }
+
+        &__inpname{
+            min-height: 40px;
+        }
+
+        &__inpemail{
+            min-height: 40px;
+        }
+
+        &__inptext{
+            padding: 12px 6px 7px 24px;
+            margin-bottom: 20px;
+        }
+
+        &__btn{
+            padding: 12px 16px 11px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16.41px;
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,250 @@
+.footer{
+    display: grid;
+    color: beige;
+    background: #202020;
+    grid-template: 1fr/ 1fr minmax(auto, 410px) minmax(auto, 440px) minmax(auto, 440px) 1fr;
+    // gap: 30px;
+    align-items: center;
+
+    &__left {
+        grid-column: 2/3;
+    }
+
+    &__logo {
+        margin-bottom: 3px;
+        outline: none;
+        display: inline-block;
+        height: 31px;
+    }
+
+    &__left:hover:not(:focus-visible) {
+    background: #BC572B;
+    }
+
+    &__left:active:not(:focus-visible) {
+        background: #FF6E30;
+    } 
+
+    &__logo:focus-visible {
+        background: #CE4307;
+    } 
+
+    &__text {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.06px;
+        // letter-spacing: 0.83px;    
+        color: #E9E9E9;
+    }
+
+    &__center p{
+        margin: 0;
+        padding: 0;
+    }
+
+    &__center{
+        width: 90%;
+        padding-left: 32px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        // letter-spacing: 0.83px;    
+        color: #CACACA;
+    }
+
+
+    &__right{
+        justify-self: end;
+        padding-top: 5px;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &__more{
+        margin-bottom: 7px;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        // letter-spacing: 0.83px;    
+        color: #CACACA;
+    }
+
+    &__links{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+
+    &__ok{
+        grid-column: 2/3;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__ok a{    
+        display: inline-block;    
+    }
+
+    &__ok a:focus-visible{   
+        outline: 3px solid #CE4307;          
+    }
+
+    &__ok svg{
+        fill:#CACACA;
+        transition: fill .2s ease-in-out;
+    }
+
+    &__ok svg:hover:not(:focus-visible){
+        fill: #FF6E30;
+    }
+
+    &__ok svg:active:not(:focus-visible){
+        fill: #BC572B;
+    }
+
+    &__ok svg:focus-visible{
+        fill: #CE4307;
+    }
+
+    &__vk{
+        padding-left: 9px;
+        cursor: pointer;
+    }
+
+    &__vk a{    
+        display: inline-block;    
+        outline: none;
+    }
+
+    &__vk a:focus-visible{   
+        outline: 3px solid #CE4307;    
+    }
+
+    &__vk svg{
+        fill:#CACACA;
+        transition: fill .2s ease-in-out;
+    }
+
+    &__vk svg:hover:not(:focus-visible){
+        fill: #FF6E30;
+    }
+
+    &__vk svg:active:not(:focus-visible){
+        fill: #BC572B;
+    }
+
+    &__vk svg:focus-visible{
+        fill: #CE4307;
+    }
+}
+
+// &__btn:hover:not(:focus-visible){
+//     background: #BC572B;
+// }
+
+// &__btn:active:not(:focus-visible){
+//     outline: 2px solid #CE4307;
+//     outline-offset: -2px;
+//     background: #FF6E30;
+// }
+
+// &__btn:focus-visible{        
+//     background: #CE4307;
+//     outline: none;
+// }
+
+@media (max-width:1220px) {
+
+    .footer{        
+        // grid-template:1fr/ 1fr minmax(auto, 630px) minmax(auto, 630px) 1fr;
+        grid-template: 1fr/ 1fr minmax(auto, 310px) minmax(auto, 424px) minmax(auto, 200px) 1fr;
+        gap: 30px;
+       
+        &__center{
+            // max-width: 310px;
+            // width: 100%;
+            padding-left: 0;
+        }
+
+        &__right{
+            justify-self: center;
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    .footer{        
+        grid-template: 1fr/ 1fr minmax(auto, 357px) minmax(auto, 357px) 1fr;
+
+        &__center{
+            display: none;
+        }
+
+        &__right{
+            justify-self: end;
+        }
+    }
+}
+
+@media (max-width:320px) {
+
+    .footer{      
+        position: relative; 
+        // grid-template:1fr/ 1fr minmax(auto, 630px) minmax(auto, 630px) 1fr;
+        grid-template: minmax(auto, 123px) minmax(auto, 62px)/ 1fr minmax(auto, 320px) 1fr;
+        gap: 0;
+        padding: 0 21px;
+
+        &__left{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            justify-self: center;            
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #4A4A4A;
+            margin: 0 -21px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__logo {
+            
+            height: 18px;
+        }
+
+
+        &__logo img{
+            width: 112px;
+            height: 18px;
+        }
+
+        &__text{
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 12.9px;
+        }
+
+        &__right{
+            
+            grid-column: 2/3;
+            grid-row: 1/2;
+            justify-self: center;
+        }
+    }
+
+    
+}
